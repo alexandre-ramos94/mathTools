@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+}
+ul{
+    display: flex;
+
+}
+.nav-wrapper{
+    display: flex;
+    justify-content: space-between;
+    background-color: #111;
+    color: whitesmoke;
+}
+ul li {
+    list-style-type: none;
+    margin-right: 10px;
+    padding: 2px 5px;
+    border-bottom: transparent 1px solid;
+    transition: border-bottom 1s;
+
+}
+ a {
+
+    display: block;
+    text-decoration: none;
+    color: inherit;
+   
+}
+ul li:hover{
+    border-bottom: rgba(245, 245, 245, 0.315) 1px solid;
+}
+/* Pagina do conversor hexa decimal*/
+.main{
+    padding: 25px;
+    max-width: 300px;
+    line-height: 25pt;
+
+}

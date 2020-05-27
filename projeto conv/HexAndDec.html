@@ -4,16 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversor</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Decimal</h1>
-    <input onkeyup="decToHexa()" id='txtnum' type="number">
+    <header>
+        <div class='nav-wrapper'>
+            <div class="left-side">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#">CONVERSORES</a></li>
+                </ul>
+
+            </div>
+            <div class="right-side">
+                <ul>
+                    <li>SOBRE</li>
+                </ul>
+               
+            </div>
+        </div>
+    </header>
 
 
-    <h1>Hexadecimal</h1>
-    <input  onkeyup="HexToDec()" id='txtnum2' type="text">
-    <button onclick="HexToDec()">Calcular</button>
-    <p style="display: none;" id='res2'>resposta: </p>
+    <article class='main'>
+        <input onkeyup="decToHexa()" id='txtnum' type="number">
+        <label for="txtnum">Valor Decimal</label>
+        <input  onkeyup="HexToDec()" id='txtnum2' type="text" placeholder="#">
+        <label for="txtnum2">Hexadecimal</label>
+        <p style="display: none;" id='res2'>resposta: </p>
+    </article>
 
     
 </body>
