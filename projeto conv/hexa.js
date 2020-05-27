@@ -36,6 +36,7 @@ function decToHexa(){
     }
     var g = document.getElementById('txtnum2')
     g.value = fin
+    decBina()
 }
 
 // função para fazer o inverso
@@ -66,8 +67,44 @@ function HexToDec(){
         else{resp2.innerHTML=resultado}
         var h = document.getElementById('txtnum')
         h.value=resultado
+        decToHexa()
         
 }
+
+//Função binário para decimal
+function bina(){
+    let rst = 0
+    var num3 = document.getElementById('txtnum3').value;
+    let co = 0;
+    for(c=num3.length-1; c>=0; c--){
+        rst += num3[co] * 2**c
+        co++
+    }
+    let jdec = document.getElementById('txtnum')
+    jdec.value = rst
+    decToHexa()
+}
+
+//Função decimal para binário
+function decBina(){
+    let aux=[]
+    final = ''
+    let num4 = Number(document.getElementById('txtnum').value)
+
+    while(num4>1){
+        aux.unshift(num4%2)
+        num4=parseInt(num4/2)        
+    }
+    aux.unshift(num4)
+    for(let c in aux){
+        final += aux[c]
+    }
+    let kbin = document.getElementById('txtnum3')
+    kbin.value = Number(final)
+
+    
+}
+
 
 
 

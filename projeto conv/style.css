@@ -3,9 +3,14 @@ body {
 }
 ul{
     display: flex;
+   
 
 }
+.left-side{
+    display: flex;
+}
 .nav-wrapper{
+    max-width: 100%;
     display: flex;
     justify-content: space-between;
     background-color: #111;
@@ -35,4 +40,10 @@ ul li:hover{
     max-width: 300px;
     line-height: 25pt;
 
+}
+@media screen and (max-width: 350px){
+    .ul{
+      display: block;
+        
+    }
 }
