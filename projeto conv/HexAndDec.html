@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor</title>
+</head>
+<body>
+    <h1>Decimal</h1>
+    <input onkeyup="decToHexa()" id='txtnum' type="number">
+
+
+    <h1>Hexadecimal</h1>
+    <input  onkeyup="HexToDec()" id='txtnum2' type="text">
+    <button onclick="HexToDec()">Calcular</button>
+    <p style="display: none;" id='res2'>resposta: </p>
+
+    
+</body>
+<script src="hexa.js"></script>
+<script>
+    document.getElementById('txtnum').focus();
+</script>
+</html>
