@@ -37,6 +37,7 @@ function decToHexa(){
     var g = document.getElementById('txtnum2')
     g.value = fin
     decBina()
+    DecToOct()
 }
 
 // função para fazer o inverso
@@ -68,6 +69,7 @@ function HexToDec(){
         var h = document.getElementById('txtnum')
         h.value=resultado
         decToHexa()
+
         
 }
 
@@ -104,6 +106,25 @@ function decBina(){
 
     
 }
+
+//Função para nummeros octais
+function octToDec(){
+    let num5 = Number(document.getElementById('txtnum5').value)
+    let lbin = document.getElementById('txtnum')
+    let txtoc = parseInt(num5,8)
+    lbin.value = txtoc
+    decToHexa()
+}
+
+//Função decimal para octal
+function DecToOct(){
+    let num6 = Number(document.getElementById('txtnum').value)
+    let lbin = document.getElementById('txtnum5')
+    let txtoc = num6.toString(8)
+    lbin.value = txtoc
+    decToHexa()}
+
+
 
 
 

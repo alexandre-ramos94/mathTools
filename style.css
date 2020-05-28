@@ -107,6 +107,7 @@ body{
     .main{
         margin: 30px;
         min-width: 280px;
+        max-height: 375px;
         text-align: center;
         max-height: 600px;
     }
