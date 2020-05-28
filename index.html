@@ -7,24 +7,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class='nav-wrapper'>
-            <div class="left-side">
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="HexAndDec.html">CONVERSORES</a></li>
-                    <li>SOBRE</li>
-                </ul>
+    <nav class="navbar">
+        <div class="brand-title">Brand Name</div>
+        <a href="#" class='toggle-buttom'>
+            <span class='bar'></span>
+            <span class='bar'></span>
+            <span class='bar'></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="HexAndDec.html">Ferramentas</a></li>
+                <li><a href="#">Sobre</a></li>
+            </ul>
 
-            </div>
-            <div class="right-side">
-                <ul>
-                    
-                </ul>
-               
-            </div>
         </div>
-    </header>
-    
+
+    </nav>
+
 </body>
+<script>
+    const toggleButton = document.getElementsByClassName('toggle-buttom')[0]
+    const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+    toggleButton.addEventListener('click', ()=> {navbarLinks.classList.toggle('active')
+
+    })
+
+</script>
 </html>
