@@ -27,23 +27,20 @@
 
     <article class='main'>
         <h1>Conversor de Base númerica</h1>
-        <div class='curios'>
-            <h5>HexaDecimal -> Base 16, os numeros 10, 11,12,13,14 e 15 São substituidos pelas letras A,B,C,D,E,F</h3>
-            <h5>Binário -> Base 2, Base de números usada para computação, os numeros sao escritos em 0 ou 1</h5>
-        </div>
+        <hr>
 
 
         <div class='convert'> 
-            <label for="txtnum">Valor Decimal</label><br>
-            <input onkeyup="decToHexa()" id='txtnum' type="number"><br>
+            <label for="txtnum"> Decimal</label><br>
+            <input style="width: 100%" onkeyup="decToHexa()" id='txtnum' type="number"><br>
 
             <label for="txtnum2">Hexadecimal</label><br>
            
-            <input  onkeyup="HexToDec()" id='txtnum2' type="text" placeholder="#"><br>
+            <input style="width: 100%"  onkeyup="HexToDec()" id='txtnum2' type="text" placeholder="#"><br>
            
             <label for="txtnum3">Binário</label><br>
     
-            <input style="width: 178px" min='0' max='1'  onkeyup="bina()" id='txtnum3' type="number">
+            <input style="width: 100%" onkeyup="bina()" id='txtnum3' type="number">
 
             <p style="display: none;" id='res2'>resposta: </p>
            

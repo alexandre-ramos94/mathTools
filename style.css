@@ -92,29 +92,17 @@ body{
     padding: 20px;
     max-width: 600px;
     height: 800px;
-    background-color: whitesmoke;
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
     text-align: center;
 }
 .convert{
     line-height: 30pt;
     text-align: left;
+    margin: 50px;
 }
-.curios{
-    opacity: 0.8;
-    background-color: #ddf;
-    border-radius: 10px;
-    border: outset #444 1px;
-    max-width: 200px;
-    position: absolute;
-    top: 120px;
-    right: 20px;
-    padding: 5px;
-    text-align: left;
-    text-decoration: none;
-    box-shadow: 1px 1px 5px;
 
-}
+
 @media (max-width: 640px){
     .main{
         margin: 30px;
@@ -127,10 +115,5 @@ body{
     }
     main h1{
         font-size: 10pt;
-    }
-    .curios{
-        top: 360px;
-        right: 55px;
-        margin: auto;
     }
 }
