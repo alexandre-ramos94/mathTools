@@ -17,7 +17,10 @@
         <div class="navbar-links">
             <ul>
                 <li><a href="#" class='current'>Home</a></li>
-                <li><a href="HexAndDec.html">Ferramentas</a></li>
+                <li><a onclick="drop()" class='trig' href="#">Ferramentas</a></li>
+                <div id="drop"><a href="HexAndDec.html">Conversor base numérica</a>
+                    <a href="#">Validar CPF</a>
+                </div>
                 <li><a href="#">Sobre</a></li>
             </ul>
 
@@ -27,12 +30,24 @@
 
 </body>
 <script>
+    var io = 0
     const toggleButton = document.getElementsByClassName('toggle-buttom')[0]
     const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 
     toggleButton.addEventListener('click', ()=> {navbarLinks.classList.toggle('active')
-
     })
+    function drop(){
+        let dropp = document.getElementById('drop')
+        if(io == 0){
+            dropp.style.display='block'
+            io = 1}
+        else {
+            dropp.style.display='none'
+            io = 0
+        }
+    }
+
+    
 
 </script>
 </html>
