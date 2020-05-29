@@ -28,6 +28,7 @@ function verifica(){
     //Agora vamos testar os resultados
     if(x==11-result && y==11-result2){
         let res = document.getElementById('res')
+        res.innerHTML='Resultado'
         res.innerHTML+=' CPF VÁLIDO'
     }
     else{res.innerHTML='Resultado: '; res.innerHTML+= ' CPF Inválido'}
@@ -36,7 +37,11 @@ function verifica(){
 function limpa(){
     let num = document.getElementById('txtnum')
     num.value = num.value.replace('-', '', '.', '')
-    if (num.value.length>3){
-        num.value[11] = ''
+    if (num.value.length==11){
+        verifica()       
+    }
+    else{
+        let res = document.getElementById('res')
+        res.innerHTML='O cpf deve conter 11 Dígitos e somente numeros'
     }
 }
