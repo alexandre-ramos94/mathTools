@@ -37,11 +37,14 @@
     
         <div class='convert'>
             <label for=""><strong>Verificar CPF</strong></label><br>
-            <input  onkeyup="limpa()" type="text" id='txtnum' placeholder="Digite um número de CPF">
+            <input autofocus onkeyup="limpa()" type="text" id='txtnum' placeholder="Digite um número de CPF">
         <br>
-            <p id='res'>Resultado: </p><br>
-            <button class='bt' onclick="geraCpf()">Gerar Cpf</button><br>
-            <input id='rescpf' type="text">
+            <p id='res'>Resultado: </p>
+            <div id='gera'>
+                <input id='rescpf' type="text">
+                <button class='bt' onclick="geraCpf()">Gerar Cpf</button>
+            </div>
+            
             
         </div>
         
