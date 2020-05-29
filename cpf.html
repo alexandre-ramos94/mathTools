@@ -16,8 +16,8 @@
         </a>
         <div class="navbar-links">
             <ul>
-                <li><a href="index.html" class='current'>Home</a></li>
-                <li><a onclick="drop()" class='trig' href="#">Ferramentas</a></li>
+                <li><a href="index.html" >Home</a></li>
+                <li><a onclick="drop()" class='trig current' href="#" >Ferramentas</a></li>
                 <div id="drop"><a href="HexAndDec.html">Conversor base numérica</a>
                     <a href="#">Validar CPF</a>
                 </div>
@@ -37,10 +37,10 @@
     
         <div class='convert'>
             <label for="">Verificar CPF</label><br>
-            <input  onkeyup="limpa()" type="text" id='txtnum'>
+            <input  onkeyup="limpa()" type="text" id='txtnum' placeholder="Digite um número de CPF">
         <br>
             <p id='res'>Resultado: </p><br>
-            <button onclick="geraCpf()">Gerar Cpf</button><br>
+            <button class='bt' onclick="geraCpf()">Gerar Cpf</button><br>
             <input id='rescpf' type="text">
             
         </div>

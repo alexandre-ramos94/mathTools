@@ -43,7 +43,7 @@ function limpa(){
     }
     else{
         let res = document.getElementById('res')
-        res.innerHTML='O cpf deve conter ao menos 11 dígitos. Apernas números ou no formato: 123.456.789-99'
+        res.innerHTML='O cpf deve conter ao menos 11 dígitos. Apernas números <br> Ou no formato: 123.456.789-99'
     }
 }
 
