@@ -32,3 +32,11 @@ function verifica(){
     }
     else{res.innerHTML='Resultado: '; res.innerHTML+= ' CPF Inválido'}
 }
+
+function limpa(){
+    let num = document.getElementById('txtnum')
+    num.value = num.value.replace('-', '', '.', '')
+    if (num.value.length>3){
+        num.value[11] = ''
+    }
+}

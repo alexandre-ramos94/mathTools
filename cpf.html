@@ -37,8 +37,8 @@
     
         <div class='convert'>
             <label for="">Verificar CPF</label><br>
-            <input type="number" id='txtnum'>
-            <button onclick="verifica()">Verificar</button><br>
+            <input maxlength="10" onkeyup="limpa()" type="number" id='txtnum'>
+            <button  onclick="verifica()">Verificar</button><br>
             <p id='res'>Resultado: </p>
             
         </div>
