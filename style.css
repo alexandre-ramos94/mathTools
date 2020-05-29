@@ -63,6 +63,7 @@ body{
     height: 100px;
     top: 50px;
     display: none;
+    z-index: 100;
 
     
 }
