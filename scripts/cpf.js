@@ -26,7 +26,7 @@ function verifica(){
     }
     result2 = result2%11;
     //Agora vamos testar os resultados
-    if(x==11-result && y==11-result2){
+    if(((result == 1 || result == 0 && x==0) || x==11-result) && ((result2 == 1 || result2 ==0 && y==0)|| y==11-result2)){
         let res = document.getElementById('res')
         res.innerHTML='Resultado'
         res.innerHTML+=' CPF VÁLIDO'
@@ -44,4 +44,55 @@ function limpa(){
         let res = document.getElementById('res')
         res.innerHTML='O cpf deve conter 11 Dígitos e somente numeros'
     }
+}
+
+//Função para gerar cpf aleatório
+function geraCpf(){
+    let aux=[]
+    let x = parseInt((Math.random())*10)
+    for(let c =0; c<9; c++){
+        aux.push(parseInt((Math.random())*10))
+    }
+    //Adicionando o primeiro digito verificador
+    let sub = 0
+    let dec = 10
+    let result= 0
+    for (sub; sub<9; sub++){
+        result += dec*aux[sub]
+        dec--
+    }
+    result = result%11;
+    if(result==0 ||result==1){
+        aux.push(0)
+    }
+    else{
+        aux.push(11-result)
+    }
+    // Adicionando o segundo digito
+    dec = 11
+    result2 = 0
+    for(let c=0; c<10; c++){
+        result2 += dec*aux[c]
+        dec--
+    }
+    result2 = result2%11;
+    if(result2 == 0 || result2 == 1){
+        aux.push(0)
+    }
+    else{
+        aux.push(11-result2)
+    }
+    //Devolvendo o resultado para o html
+    let fn = ''
+    for (let k in aux){
+        fn += aux[k]
+    }
+    let incpf = document.getElementById('rescpf')
+    incpf.value = ''
+    incpf.value += fn
+
+
+
+
+   
 }
