@@ -85,7 +85,12 @@ function geraCpf(){
     //Devolvendo o resultado para o html
     let fn = ''
     for (let k in aux){
-        fn += aux[k]
+        if(k==2 || k==5){fn += aux[k] + '.'}
+        else if(k==8){fn += aux[k] + '-'}
+        else{
+            fn += aux[k]
+        }
+       
     }
     let incpf = document.getElementById('rescpf')
     incpf.value = ''
