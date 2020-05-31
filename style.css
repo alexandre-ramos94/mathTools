@@ -188,4 +188,10 @@ input{
         min-width: 180px;
     }
 }
-
+/*teste*/
+.hexa input{
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 12pt;
+}

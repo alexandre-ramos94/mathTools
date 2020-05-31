@@ -8,7 +8,7 @@ console.log(qlq(99))*/
 
 
 function inversor(x){
-    let base = 8;
+    let base = 16;
     let result = 0;
     let cont = 0
     for(c=x.length-1; c>=0; c--){
@@ -17,6 +17,6 @@ function inversor(x){
     }
     console.log(result)
 }
-inversor('')
+inversor('80')
 
 
