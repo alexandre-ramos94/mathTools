@@ -113,6 +113,9 @@ body{
     #drop {
         top: 140px;
     }
+    #txtexp{
+        width: 100%;
+    }
 }
 /* styles da pagina dos conversores*/
 .main {
@@ -194,4 +197,5 @@ input{
     border-radius: 5px;
     text-align: center;
     font-size: 12pt;
+
 }
