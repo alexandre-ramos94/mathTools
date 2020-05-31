@@ -45,30 +45,9 @@ function decToHexa(){
 
 
 function HexToDec(){
-        var y= document.getElementById('txtnum2').value;
-        y = y.toUpperCase();
-        var resultado = 0
-        var aux = []
-        let contador = 0
-        var resp2 = document.getElementById('res2')
-
-        for(var c=y.length-1;c>=0;c--){
-            aux.push(y[contador])
-            if(aux[contador]=='A'){aux[contador]='10'}
-            else if(aux[contador]=='B'){aux[contador]='11'}
-            else if(aux[contador]=='C'){aux[contador]='12'}
-            else if(aux[contador]=='D'){aux[contador]='13'}
-            else if(aux[contador]=='E'){aux[contador]='14'}
-            else if(aux[contador]=='F'){aux[contador]='15'}
-            resultado += Number(aux[contador])*16**c
-            contador++
-        }
-        if(isNaN(resultado)){
-            resp2.innerHTML='Houve algum erro com os dados'
-        }
-        else{resp2.innerHTML=resultado}
+        var y= document.getElementById('txtnum2').value.toUpperCase();   
         var h = document.getElementById('txtnum')
-        h.value=resultado
+        h.value=parseInt(y,16)
         decToHexa()
 
         

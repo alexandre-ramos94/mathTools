@@ -20,10 +20,10 @@ console.log(qlq(99))*/
 inversor('80')*/
 
 function binb(x){
-    x = x.toString(2)
+    x = parseInt(x,16)
     console.log(x)
 }
-binb(50)
+binb('ff1')
 
 
 
