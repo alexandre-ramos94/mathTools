@@ -60,6 +60,10 @@ function DecToOct(){
 function base(){
     let num = Number(document.getElementById('txtnum').value)
     let bas = Number(document.getElementById('txtbase').value)
+    txtbas = Number(document.getElementById('txtbase'))
+    if(bas>35){bas=35; alert('Base máxima deve ser 35');txtbase.value=35}
+    else if(bas<2){bas=2; alert('Base minima deve ser 2');txtbase.value=2}
+
     let result = document.getElementById('txtexp')
     totf = num.toString(bas).toLocaleUpperCase()
     result.value = totf 
