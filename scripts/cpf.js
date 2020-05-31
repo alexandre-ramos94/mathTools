@@ -38,6 +38,10 @@ function verifica(){
 
 function limpa(){
     let num = document.getElementById('txtnum')
+    if(num.value.length == 3) {num.value += '.'}
+    if(num.value.length == 7) {num.value += '.'}
+    if(num.value.length == 11) {num.value += '-'}
+    
     if (num.value.length==11 || num.value.length==14){
         verifica()       
     }
