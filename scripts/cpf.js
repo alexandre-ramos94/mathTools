@@ -29,7 +29,7 @@ function verifica(){
     //Agora vamos testar os resultados
     if(((result == 1 || result == 0 && x==0) || x==11-result) && ((result2 == 1 || result2 ==0 && y==0)|| y==11-result2) && (aux.length==11)){
         let res = document.getElementById('res')
-        res.innerHTML='Resultado'
+        res.innerHTML='Resultado: '
         res.innerHTML+=' CPF VÁLIDO'
     }
     else{res.innerHTML='Resultado: '; res.innerHTML+= ' CPF Inválido'}
@@ -43,7 +43,7 @@ function limpa(){
     }
     else{
         let res = document.getElementById('res')
-        res.innerHTML='Formato apenas números ou <br> formato: 123.456.789-00'
+        res.innerHTML='11 Dígitos'
     }
 }
 

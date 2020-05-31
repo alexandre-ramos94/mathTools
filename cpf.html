@@ -37,19 +37,22 @@
     
         <div class='convert'>
             <label for=""><strong>Verificar CPF</strong></label><br>
-            <input autofocus onkeyup="limpa()" type="text" id='txtnum' placeholder="Digite um número de CPF">
-        <br>
-            <p id='res'>Resultado: </p>
+            <div class='primveri'>
+              
+                <input class='rescpf' autofocus onkeyup="limpa()" type="text" id='txtnum' placeholder="Digite um número de CPF">
+            <br>
+                <span id='res'>Resultado: </span>
+            </div>
             <div id='gera'>
-                <input id='rescpf' type="text">
+                <input placeholder="CPF aleatório e validado" class='rescpf' id='rescpf' type="text">
                 <button class='bt' onclick="geraCpf()">Gerar Cpf</button>
             </div>
             
             <div id='pers-wrapper'>
                 <hr>
                 <h3>CPF Personalizado</h2>
-                <input placeholder="9 digitos. somente numeros" onkeyup="personaliza()" id='txtpers' type="number"> =>
-                <input type="text" id='txtresul'>
+                <input class='rescpf' placeholder="9 digitos. somente numeros" onkeyup="personaliza()" id='txtpers' type="number"> =>
+                 <input class='rescpf'  type="text" id='txtresul' placeholder="Resultado">
 
             </div>
             
