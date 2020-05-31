@@ -27,7 +27,8 @@ function verifica(){
     }
     result2 = result2%11;
     //Agora vamos testar os resultados
-    if(((result == 1 || result == 0 && x==0) || x==11-result) && ((result2 == 1 || result2 ==0 && y==0)|| y==11-result2) && (aux.length==11)){
+    let isrepet = repet(aux)
+    if((((result == 1 || result == 0 && x==0) || x==11-result) && ((result2 == 1 || result2 ==0 && y==0)|| y==11-result2) && (aux.length==11) && isrepet==false)){
         let res = document.getElementById('res')
         res.innerHTML='Resultado: '
         res.innerHTML+=' CPF VÁLIDO'
@@ -36,18 +37,28 @@ function verifica(){
 
 }
 
+
+function repet(lst){
+    let teste = 0
+    for (let c=0; c<lst.length-1; c++){
+        if(lst[c] != lst[c+1]){teste +=1
+        }
+    }
+    if (teste!=0){return false}
+    else{return true}
+}
+
 function limpa(){
     let num = document.getElementById('txtnum')
     if(num.value.length == 3) {num.value += '.'}
     if(num.value.length == 7) {num.value += '.'}
     if(num.value.length == 11) {num.value += '-'}
-    
-    if (num.value.length==11 || num.value.length==14){
+    if (num.value.length==14 || num.value.length==11){
         verifica()       
     }
     else{
         let res = document.getElementById('res')
-        res.innerHTML='11 Dígitos'
+        res.innerHTML=''
     }
 }
 
