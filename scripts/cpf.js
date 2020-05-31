@@ -97,8 +97,51 @@ function geraCpf(){
     incpf.value = ''
     incpf.value += fn
 
+}
 
-
-
-   
+//Função para criar CPF personalizado//
+function personaliza(){
+    var txtpers = document.getElementById('txtpers').value;
+    let aux=[]
+    if(txtpers.length == 9){
+    //Vamos pegar os numeros e colocar numa array para auxiliar//
+        for(let c in txtpers){
+            aux.push(Number(txtpers[c]))
+        }
+        //Agora vamos fazer os calculos do primeiro digito verificador//
+        let sub = 0
+        let des = 10
+        let result5 = 0
+        for(let c=0; c<9;c++){
+            result5 += aux[c] * des
+            des--
+        }
+        if(result5%11==0 || result5%11==1){
+            aux.push(0)
+        }
+        else{aux.push(11-result5%11)
+        }
+        //Agora calculos para o segundo//
+        sub = 0
+        des = 11
+        let result6 = 0
+        for(let c=0; c<10;c++){
+            result6 += aux[c] * des
+            des--
+        }
+        if(result6%11==0 || result6%11==1){
+            aux.push(0)
+        }
+        else{aux.push(11-result6%11)
+        }
+        let pbin = document.getElementById('txtresul')
+        //Laço para escrever os digitos guardados no array auxiliar//
+        let final = ''
+        for(let c in aux){
+            
+            final += aux[c]
+        }
+        alert('here')
+        pbin.value = final
+    }
 }
