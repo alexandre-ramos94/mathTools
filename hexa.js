@@ -37,6 +37,7 @@ function decToHexa(){
     var g = document.getElementById('txtnum2')
     g.value = fin
     decBina()
+    base()
     DecToOct()
 }
 
@@ -124,7 +125,19 @@ function DecToOct(){
     lbin.value = txtoc
     decToHexa()}
 
+//Função para base qualquer//
+function base(){
+    let num = Number(document.getElementById('txtnum').value)
+    let bas = Number(document.getElementById('txtbase').value)
+    let result = document.getElementById('txtexp')
+    totf = num.toString(bas)
+    result.value = totf 
+}
 
+//Função para fazer o inverso//
+function decBase(){
+    
+}
 
 
 
