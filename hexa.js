@@ -1,41 +1,8 @@
 function decToHexa(){
-    var result = []
-    var fin = ''
+
     var x = Number(document.getElementById('txtnum').value)
-    x= parseInt(x)
-    while(x>15){
-        result.unshift(x%16)
-        x=parseInt(x/16)
-      
-    }
-    result.unshift(x)
-    for(var c=0;c<result.length;c++)
-    switch(result[c]){
-        case 10: result[c] = 'A';
-        break;
-
-        case 11: result[c] = 'B';
-        break;
-
-        case 12: result[c] = 'C';
-        break;
-
-        case 13: result[c] = 'D';
-        break;
-
-        case 14: result[c] = 'E';
-        break;
-
-        case 15: result[c] = 'F';
-        break;
-        
-    }
-
-    for (c in result){
-        fin += result[c]
-    }
     var g = document.getElementById('txtnum2')
-    g.value = fin
+    g.value = x.toString(16).toUpperCase()
     decBina()
     base()
     DecToOct()
@@ -100,7 +67,11 @@ function base(){
 
 //Função para fazer o inverso//
 function decBase(){
-    
+    let txtbase = document.getElementById('txtbase').value
+    let txtexp = document.getElementById('txtexp').value
+    let num = document.getElementById('txtnum')
+    num.value = parseInt(txtexp, txtbase)
+    decToHexa().toUpperCase()
 }
 
 
