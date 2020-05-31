@@ -93,9 +93,13 @@ function geraCpf(){
         }
        
     }
+    let jin = document.getElementById('txtnum')
     let incpf = document.getElementById('rescpf')
     incpf.value = ''
     incpf.value += fn
+    jin.value=''
+    jin.value += fn
+    verifica()
 
 }
 
@@ -137,6 +141,8 @@ function personaliza(){
         let pbin = document.getElementById('txtresul')
         //Laço para escrever os digitos guardados no array auxiliar//
         let final = ''
+        let incpf = document.getElementById('rescpf')
+        incpf.value = ''
         for(let c in aux){
             if(c== 2|| c==5){
                 final += aux[c] + '.'
