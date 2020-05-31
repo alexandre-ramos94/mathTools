@@ -85,20 +85,10 @@ function bina(){
 
 //Função decimal para binário
 function decBina(){
-    let aux=[]
-    final = ''
     let num4 = Number(document.getElementById('txtnum').value)
 
-    while(num4>1){
-        aux.unshift(num4%2)
-        num4=parseInt(num4/2)        
-    }
-    aux.unshift(num4)
-    for(let c in aux){
-        final += aux[c]
-    }
     let kbin = document.getElementById('txtnum3')
-    kbin.value = Number(final)
+    kbin.value = num4.toString(2)
 
     
 }
