@@ -76,15 +76,10 @@ function HexToDec(){
 
 //Função binário para decimal
 function bina(){
-    let rst = 0
+ 
     var num3 = document.getElementById('txtnum3').value;
-    let co = 0;
-    for(c=num3.length-1; c>=0; c--){
-        rst += num3[co] * 2**c
-        co++
-    }
     let jdec = document.getElementById('txtnum')
-    jdec.value = rst
+    jdec.value = parseInt(num3,2)
     decToHexa()
 }
 

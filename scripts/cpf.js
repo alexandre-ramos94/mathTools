@@ -128,7 +128,6 @@ function personaliza(){
             aux.push(Number(txtpers[c]))
         }
         //Agora vamos fazer os calculos do primeiro digito verificador//
-        let sub = 0
         let des = 10
         let result5 = 0
         for(let c=0; c<9;c++){
