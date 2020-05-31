@@ -138,10 +138,17 @@ function personaliza(){
         //Laço para escrever os digitos guardados no array auxiliar//
         let final = ''
         for(let c in aux){
-            
-            final += aux[c]
+            if(c== 2|| c==5){
+                final += aux[c] + '.'
+            }
+            else if(c==8){
+                final += aux[c] + '-'
+            }
+            else{final += aux[c]}
         }
-        alert('here')
+        let opin = document.getElementById('txtnum')
+        opin.value = final
         pbin.value = final
+        verifica()
     }
 }
