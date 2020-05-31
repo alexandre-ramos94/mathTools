@@ -61,7 +61,7 @@ function base(){
     let num = Number(document.getElementById('txtnum').value)
     let bas = Number(document.getElementById('txtbase').value)
     let result = document.getElementById('txtexp')
-    totf = num.toString(bas)
+    totf = num.toString(bas).toLocaleUpperCase()
     result.value = totf 
 }
 
