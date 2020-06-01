@@ -1,81 +1,30 @@
-function decToHexa(){
-
-    var x = Number(document.getElementById('txtnum').value)
-    var g = document.getElementById('txtnum2')
-    g.value = x.toString(16).toUpperCase()
-    decBina()
-    base()
-    DecToOct()
+function DecToOther(x){
+    x = Number(x)
+    let numhex=document.getElementById('txtnum2')
+    let numbin=document.getElementById('txtnum3')
+    let numoct=document.getElementById('txtnum5')
+    let numexp=document.getElementById('txtexp')
+    let numbas=Number(document.getElementById('txtbase').value)
+    numhex.value=x.toString(16).toUpperCase()
+    numbin.value=x.toString(2)
+    numoct.value=x.toString(8)
+    numexp.value=x.toString(numbas).toUpperCase()
 }
 
-// função para fazer o inverso
-
-
-function HexToDec(){
-        var y= document.getElementById('txtnum2').value.toUpperCase();   
-        var h = document.getElementById('txtnum')
-        h.value=parseInt(y,16)
-        decToHexa()
-
-        
+function distrib(y,base){
+    base = Number(base)
+    if (base==5){
+        base=Number(document.getElementById('txtbase').value)
+    }
+    let num = document.querySelector('#txtnum')
+    num.value=parseInt(y, base)
+    DecToOther(num.value)
 }
 
-//Função binário para decimal
-function bina(){
- 
-    var num3 = document.getElementById('txtnum3').value;
-    let jdec = document.getElementById('txtnum')
-    jdec.value = parseInt(num3,2)
-    decToHexa()
-}
+function partial(base){
+    let expo=document.getElementById('txtexp').value
+    distrib(expo, base)
 
-//Função decimal para binário
-function decBina(){
-    let num4 = Number(document.getElementById('txtnum').value)
-
-    let kbin = document.getElementById('txtnum3')
-    kbin.value = num4.toString(2)
-
-    
-}
-
-//Função para nummeros octais
-function octToDec(){
-    let num5 = Number(document.getElementById('txtnum5').value)
-    let lbin = document.getElementById('txtnum')
-    let txtoc = parseInt(num5,8)
-    lbin.value = txtoc
-    decToHexa()
-}
-
-//Função decimal para octal
-function DecToOct(){
-    let num6 = Number(document.getElementById('txtnum').value)
-    let lbin = document.getElementById('txtnum5')
-    let txtoc = num6.toString(8)
-    lbin.value = txtoc
-    decToHexa()}
-
-//Função para base qualquer//
-function base(){
-    let num = Number(document.getElementById('txtnum').value)
-    let bas = Number(document.getElementById('txtbase').value)
-    txtbas = Number(document.getElementById('txtbase'))
-    if(bas>35){bas=35; alert('Base máxima deve ser 35');txtbase.value=35}
-    else if(bas<2){bas=2; alert('Base minima deve ser 2');txtbase.value=2}
-
-    let result = document.getElementById('txtexp')
-    totf = num.toString(bas).toLocaleUpperCase()
-    result.value = totf 
-}
-
-//Função para fazer o inverso//
-function decBase(){
-    let txtbase = document.getElementById('txtbase').value
-    let txtexp = document.getElementById('txtexp').value
-    let num = document.getElementById('txtnum')
-    num.value = parseInt(txtexp, txtbase)
-    decToHexa().toUpperCase()
 }
 
 
